@@ -26,15 +26,30 @@ app.use(express.json())
 
 // ===== Routes =====
 // Index
+app.get('/products', (req, res) => {
+    Product.find({}, (err, allProducts) => {
+        res.render('Index', {shop: allProducts})
+    })
+})
 
 // New
+app.get('/products/new', (req, res) => res.render('New'))
 
 // Delete
 
 // Update
 
 // Create
+app.post('/products', (req, res) => {
+    Product.create(req.body, (err, createdProduct) => {
+        res.redirect('/products')
+        console.log(req.body, 'body')
+    })
+})
 
 // Edit
 
 // Show
+
+
+app.listen(PORT, () => console.log(`Listening to port ${PORT}`))
