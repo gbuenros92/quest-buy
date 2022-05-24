@@ -13,3 +13,7 @@ form {
     width: 33vw;
     border: 1px solid red;
 }
+
+span {
+    color: red
+}

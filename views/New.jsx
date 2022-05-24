@@ -4,17 +4,17 @@ const DefaultLayout = require('./layout/DefaultLayout')
 module.exports = class New extends React.Component {
     render() {
         return (
-            <DefaultLayout>
+            <DefaultLayout id="New Product">
                 <div id="form-container">
                     <form action="/products" method="POST">
-                        <label htmlFor="name">Name:</label>
+                        <label htmlFor="name">Name: <span>*</span></label>
                         <input type="text" id="name" name="name" required />
 
                         <br></br>
 
-                        <label htmlFor="category">Category:</label>
+                        <label htmlFor="category">Category: <span>*</span></label>
                         <select id="category" name="category" required>
-                            <option></option>
+                            <option value="none" selected disabled hidden>Select a Category</option>
                             <option value="armor">Armor</option>
                             <option value="weapon">Weapon</option>
                             <option value="potion">Potion</option>
@@ -24,17 +24,17 @@ module.exports = class New extends React.Component {
 
                         <br></br>
 
-                        <label htmlFor="price">Price:</label>
+                        <label htmlFor="price">Price: <span>*</span></label>
                         <input type="number" id="price" name="price" required />
 
                         <br></br>
 
-                        <label htmlFor="stock">How Many Are You Selling?</label>
+                        <label htmlFor="stock">How Many Are You Selling? <span>*</span></label>
                         <input type="number" id="stock" name="stock" required />
 
                         <br></br>
 
-                        <label htmlFor="desc"></label>
+                        <label htmlFor="desc">Description: <span>*</span></label>
                         <textarea placeholder="Write a brief description of the product here" id="desc" name="desc" required></textarea>
 
                         <br></br>
