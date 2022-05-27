@@ -40,7 +40,7 @@ module.exports = class Edit extends React.Component {
                     <br></br>
 
                     <label htmlFor="image">Edit Photo:</label>
-                    <input type="file" id="image" name="image" defaultValue={product.image}/>
+                    <input type="file" id="image" name="image" />
 
                     <br></br>
 

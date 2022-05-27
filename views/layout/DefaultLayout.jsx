@@ -25,7 +25,10 @@ class DefaultLayout extends React.Component {
                                     </ul>
                                 </li>
                             </ul>
+
                             <button>New</button>
+
+                            <a href="/products/new">CLICK HERE</a>
                         </nav>
 
                         <div id="content">
