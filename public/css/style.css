@@ -1,7 +1,86 @@
-body {
-    margin: 0
+*{box-sizing: border-box}
+body {margin: 0}
+
+/* ========== Default Layout ========== */
+
+nav {
+    border: 1px solid orange;
+    height: 40px;
 }
 
+nav > a, ul {
+    display: inline-block;
+    list-style: none;
+    margin-left: 10px;
+    height: inherit;
+}
+
+#dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: lightcoral;
+    left: 77px;
+    top: 50px;
+}
+
+#dropdown:hover #dropdown-menu {
+    display: block;
+    z-index: 1;
+}
+
+#dropdown:hover {
+    background-color: lightblue;
+}
+
+/* ========== Index ========== */
+#prod-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: solid black;
+    border-radius: 15px;
+    width: 280px;
+    height: 400px;
+    text-align: center;
+}
+
+#idx-name {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#name-txt {
+    border: 1px solid red;
+    /* justify-content: center; */
+}
+
+#dropdown-container {
+    border: 1px solid red;
+    /* justify-content: flex-end; */
+}
+
+#idx-menu-options {
+    display: none;
+    position: absolute;
+    text-align: left;
+    background-color: lightcoral;
+}
+
+#idx-dropdown:hover #idx-menu-options {
+    display: block;
+    z-index: 1;
+}
+
+.prod {
+    border: 1px solid black;
+}
+
+img {
+    width: 90px;
+    height: 120px;
+}
+
+/* ========== New ========== */
 form {
     display: flex;
     flex-direction: column;

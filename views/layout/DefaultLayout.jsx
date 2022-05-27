@@ -10,15 +10,13 @@ class DefaultLayout extends React.Component {
                 </head>
 
                 <body>
-                    <div id="logo"></div>
 
-                    {/* NAVIGATION BAR */}
-                    <div id="navParent">
+                    <div id="parent">
                         <nav>
-                            <a href='/'>All Products</a>
+                            <a href="/products">Home</a>
                             <ul>
                                 <li id="dropdown">
-                                    <a href=''>Categories</a>
+                                    <a href=''>Our Products</a>
                                     <ul id="dropdown-menu">
                                         <li>Weapons</li>
                                         <li>Armor Pieces</li>
@@ -27,11 +25,14 @@ class DefaultLayout extends React.Component {
                                     </ul>
                                 </li>
                             </ul>
-
+                            <button>New</button>
                         </nav>
+
+                        <div id="content">
+                            {this.props.children}
+                        </div>
                     </div>
-                    
-                    {this.props.children}
+
                 </body>
             </html>
 

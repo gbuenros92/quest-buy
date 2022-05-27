@@ -7,25 +7,48 @@ module.exports = class Index extends React.Component {
         const { shop } = this.props
         // console.log(shop, 'shop')
         return (
-            <DefaultLayout title="Index">
+            <DefaultLayout title="All Products">
                 <a href="/products/new">CLICK HERE</a>
                 <ul>
                     {
                         shop.map(product => {
                             return (
                                 <li key={product._id}>
-                                    <p>Product Name: <a href={`/products/${product._id}`}>{product.name}</a></p>
-                                    <p>Category: {product.category}</p>
-                                    <p>Price: {product.price}</p>
-                                    <p>Number in stock: {product.stock}</p>
-                                    <p>Description: {product.desc}</p>
-                                    <img src={`/images/${product.image}`}/>
 
-                                    <form action={`/products/${product._id}?_method=DELETE`} method="POST">
-                                        <input type="submit" value="Delete" />
-                                    </form>
+                                    <div id="prod-container">
 
-                                    <button><a href={`/products/${product._id}/edit`}>Edit</a></button>
+                                        <div class="prod" id="idx-name">
+                                            <div id="name-txt">
+                                                <h2><a href={`/products/${product._id}`}>{product.name}</a></h2>
+                                            </div>
+
+                                            <div id="dropdown-container">
+                                                <ul>
+                                                    <li id="idx-dropdown">
+                                                        <a href="">•••</a>
+                                                        <ul id="idx-menu-options">
+                                                            <li>Edit</li>
+                                                            <li>Delete</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="prod" id="idx-img"><img src={`/images/${product.image}`} /></div>
+
+                                        <div class="prod" id="idx-desc">
+                                            <p id="desc-txt">{product.desc}</p>
+                                            <p id="stock-txt">Number in stock: {product.stock}</p>
+                                        </div>
+
+                                        <form action={`/products/${product._id}?_method=DELETE`} method="POST">
+                                            <input type="submit" value="Delete" />
+                                        </form>
+
+                                        <button><a href={`/products/${product._id}/edit`}>Edit</a></button>
+                                    </div>
+
                                 </li>
                             )
                         })

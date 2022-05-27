@@ -4,7 +4,7 @@ const app = express()
 const mongoose = require('mongoose')
 const method = require('method-override')
 const Product = require('./models/Product')
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 // ===== Connection to Database =====
 mongoose.connect(process.env.MONGO_URI, {
@@ -25,6 +25,9 @@ app.use(express.static('public'))
 app.use(express.json())
 
 // ===== Routes =====
+// Home Page
+app.get('/', (req, res) => res.render('Home'))
+
 // Index
 app.get('/products', (req, res) => {
     Product.find({}, (err, allProducts) => {
