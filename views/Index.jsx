@@ -38,11 +38,11 @@ module.exports = class Index extends React.Component {
                                             <h3><a href={`/products/${product._id}`}>{product.name}</a></h3>
                                         </div>
 
-                                        <div id="idx-img"><img src={`/images/${product.image}`} /></div>
+                                        <div id="idx-img"><a href={`/products/${product._id}`}><img src={`/images/${product.image}`} /></a></div>
 
                                         <div id="idx-desc">
                                             <p id="desc-txt">{product.desc}</p>
-                                            <p id="price-txt">Price: {product.price} Silver Eyes</p>
+                                            <p id="price-txt">Price: {product.price} Silvers</p>
                                         </div>
                                     </div>
 

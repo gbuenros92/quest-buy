@@ -4,11 +4,11 @@ const DefaultLayout = require('./layout/DefaultLayout')
 module.exports = class New extends React.Component {
     render() {
         return (
-            <DefaultLayout id="New Product">
-                <div id="form-container">
+            <DefaultLayout title="Post New Product">
+                <div class="form-container">
                     <form action="/products" method="POST">
                         <label htmlFor="name">Name: <span>*</span></label>
-                        <input type="text" id="name" name="name" required />
+                        <input class="input-txt" type="text" id="name" name="name" required />
 
                         <br></br>
 
@@ -25,17 +25,17 @@ module.exports = class New extends React.Component {
                         <br></br>
 
                         <label htmlFor="price">Price: <span>*</span></label>
-                        <input type="number" id="price" name="price" required />
+                        <input class="number input-txt" type="number" id="price" name="price" required />
 
                         <br></br>
 
                         <label htmlFor="stock">How Many Are You Selling? <span>*</span></label>
-                        <input type="number" id="stock" name="stock" required />
+                        <input class="number input-txt" type="number" id="stock" name="stock" required />
 
                         <br></br>
 
                         <label htmlFor="desc">Description: <span>*</span></label>
-                        <textarea placeholder="Write a brief description of the product here" id="desc" name="desc" required></textarea>
+                        <textarea class="input-txt" placeholder="Write a brief description of the product here" id="desc" name="desc" required></textarea>
 
                         <br></br>
 
@@ -44,7 +44,8 @@ module.exports = class New extends React.Component {
 
                         <br></br>
 
-                        <input type="submit" value="Post Your Product"/>
+                        <input class="buttons" type="submit" value="Create New Post"/>
+                        <button class="buttons"><a href={`/products`}>Cancel</a></button>
                     </form>
                 </div>
             </DefaultLayout>
