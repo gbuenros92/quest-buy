@@ -30,7 +30,7 @@ module.exports = class New extends React.Component {
                         <br></br>
 
                         <label htmlFor="stock">How Many Are You Selling? <span>*</span></label>
-                        <input class="number input-txt" type="number" id="stock" name="stock" required />
+                        <input class="number input-txt" type="number" id="stock" name="stock" min="1" required />
 
                         <br></br>
 
