@@ -2,7 +2,7 @@
 Greetings, fellow traveler! Are you about to embark on a perilous quest to save a damsel or slay a beast? Come on in to Quest Buy to find any and all items you'll need for your journey to be a success!
 
 
-### photos
+### Products
    VERB 		 | 		  PATH 		 |  	 DESCRIPTION
 ------------ | ------------- | -------------------
 GET | /api/v1/products/ | index of products |
