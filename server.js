@@ -26,7 +26,7 @@ app.use(express.json())
 
 // ===== Routes =====
 // Home Page
-app.get('/', (req, res) => res.render('Home'))
+// app.get('/', (req, res) => res.render('Home'))
 
 // Index
 app.get('/products', (req, res) => {
