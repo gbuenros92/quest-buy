@@ -283,3 +283,108 @@ span {
 }
 
 /* ========== Show ========== */
+#show-container {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 0 0;
+}
+
+#left-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+    height: 65vh;
+    margin: 0 15px 0 0;
+    border-top: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid white;
+    background-color: #c3c3c3;
+}
+
+#left-show p {
+    margin: 0;
+    transform: translateY(-50%);
+}
+
+#show-buttons {
+    display: flex;
+}
+
+#showDelete {
+    color: red;
+}
+
+#right-show {
+    border: 1px solid red;
+    width: 30vw;
+    height: 50vh;
+    margin: 0 0 0 15px;
+    border-top: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid white;
+    background-color: #c3c3c3;
+}
+
+#prod-img {
+    background-color: #d4d4d4;
+    border-top: 2px solid black;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    border-left: 2px solid black;
+    margin: 15px;
+    padding: 15px 60px;
+}
+
+#prod-img img {
+    width: 180px;
+    height: 240px;
+}
+
+#desc-container {
+    background-color: #d4d4d4;
+    border-top: 2px solid black;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    border-left: 2px solid black;
+    margin: 20px;
+    padding: 0 25px;
+}
+
+#prod-desc {
+    font-weight: bold;
+}
+
+#buy {
+    display: flex;
+    justify-content: center;
+}
+
+#price-container {
+    background-color: #d4d4d4;
+    border-top: 2px solid black;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    border-left: 2px solid black;
+    width: 40%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin: 0 20px;
+}
+
+#price-container p {
+    font-size: 1.2rem;
+}
+
+#buyButton {
+    height: 75px;
+}
+
+#right-show > h1 {
+    text-align: center;
+    color: red;
+}

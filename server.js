@@ -53,7 +53,7 @@ app.delete('/products/:id', (req, res) => {
 app.put('/products/:id', (req, res) => {
     Product.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedProduct) => {
         if(!err) {
-            res.status(200).redirect('/products')
+            res.status(200).redirect(`/products/${req.params.id}`)
         } else {
             res.status(400).json(err)
         }
